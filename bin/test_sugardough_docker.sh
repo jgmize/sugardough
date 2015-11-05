@@ -22,5 +22,9 @@ $DC_CMD run -T web flake8 sugardough
 # Run Tests
 $DC_CMD run -T web ./manage.py test
 
+# Stop containers
+# TODO: cleanup job to stop containers left over from failed tests
+$DC_CMD stop
+
 # Delete virtualenv
 rm -rf $TDIR $ENVDIR
